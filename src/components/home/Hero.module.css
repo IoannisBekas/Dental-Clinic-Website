@@ -1,0 +1,119 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bgImage {
+    object-fit: cover;
+    transform: scale(1.1);
+    /* Slight zoom for motion availability */
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(11, 37, 51, 0.4) 0%, rgba(11, 37, 51, 0.85) 100%);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 var(--spacing-md);
+    color: #fff;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-inter);
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    background: rgba(11, 37, 51, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+    color: #fff;
+}
+
+.subtitle {
+    font-family: var(--font-inter);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.ctaWrapper {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.primaryBtn {
+    padding: 1rem 2rem;
+    background: var(--secondary);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    font-family: var(--font-inter);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.primaryBtn:hover {
+    background: #E5C558;
+    /* Lighter gold */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryBtn {
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    font-family: var(--font-inter);
+}
+
+.secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}

@@ -1,0 +1,122 @@
+.section {
+    padding: var(--spacing-xl) 0;
+    background: var(--primary);
+    /* Dark aesthetic for Tech */
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.content {
+    flex: 1;
+    z-index: 2;
+}
+
+.highlight {
+    color: var(--secondary);
+    font-family: var(--font-inter);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.featureList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature {
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-left-color: var(--secondary);
+}
+
+.featureTitle {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.featureDesc {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-inter);
+    line-height: 1.6;
+}
+
+.visual {
+    flex: 1;
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scannerImage {
+    object-fit: contain;
+    filter: drop-shadow(0 0 40px rgba(11, 37, 51, 0.5));
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.circle1 {
+    width: 400px;
+    height: 400px;
+}
+
+.circle2 {
+    width: 600px;
+    height: 600px;
+    border-color: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featureList {
+        text-align: left;
+    }
+
+    .visual {
+        width: 100%;
+        height: 400px;
+    }
+}

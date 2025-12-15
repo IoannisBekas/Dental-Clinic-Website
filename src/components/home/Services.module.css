@@ -1,0 +1,135 @@
+.section {
+    position: relative;
+    padding: var(--spacing-xl) 0;
+    background: var(--background);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eyebrow {
+    font-family: var(--font-inter);
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--surface);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.4s var(--ease-out-expo);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out-expo);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(11, 37, 51, 0.08);
+    border-color: rgba(11, 37, 51, 0.05);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.iconWrapper {
+    width: 60px;
+    height: 60px;
+    background: var(--background);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+}
+
+.card:hover .iconWrapper {
+    background: var(--primary);
+    color: #fff;
+}
+
+.cardTitle {
+    font-family: var(--font-playfair);
+    font-size: 1.75rem;
+    color: var(--primary);
+}
+
+.cardDesc {
+    font-family: var(--font-inter);
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.cardLink {
+    margin-top: auto;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.card:hover .cardLink {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}

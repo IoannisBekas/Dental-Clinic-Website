@@ -1,0 +1,114 @@
+.section {
+    padding: var(--spacing-xl) 0;
+    background: var(--surface);
+    text-align: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-family: var(--font-inter);
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-out-expo);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11, 37, 51, 0.9) 0%, rgba(11, 37, 51, 0) 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0.9;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.info {
+    transform: translateY(10px);
+    transition: transform 0.4s var(--ease-out-expo);
+}
+
+.card:hover .info {
+    transform: translateY(0);
+}
+
+.name {
+    font-family: var(--font-playfair);
+    color: #fff;
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.role {
+    font-family: var(--font-inter);
+    color: var(--secondary);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.1s;
+}
+
+.card:hover .socials {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.socialIcon {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.socialIcon:hover {
+    color: var(--secondary);
+}
