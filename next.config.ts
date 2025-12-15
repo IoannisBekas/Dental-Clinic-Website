@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/Dental-Clinic-Website',
 };
 
 export default nextConfig;
