@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Hexagon } from 'lucide-react';
+import { prefixPath } from '@/utils/basePath';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -57,7 +58,7 @@ export default function Footer() {
                                 Created by
                             </span>
                             <a href="https://ioannisbekas.github.io/BI-Solutions-Advanced-Analytics-AI-Consulting/#/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', textDecoration: 'none' }}>
-                                <img src="/images/bi_logo.png" alt="BI Solutions Logo" width={20} height={20} style={{ objectFit: 'contain' }} />
+                                <img src={prefixPath("/images/bi_logo.png")} alt="BI Solutions Logo" width={20} height={20} style={{ objectFit: 'contain' }} />
                                 <span className={styles.copyright} style={{ fontSize: '0.8rem', textDecoration: 'underline' }}>BI Solutions</span>
                             </a>
                         </div>

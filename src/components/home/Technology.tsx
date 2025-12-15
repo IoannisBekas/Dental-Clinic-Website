@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { prefixPath } from '@/utils/basePath';
 import styles from './Technology.module.css';
 
 export default function Technology() {
@@ -72,7 +73,7 @@ export default function Technology() {
 
                     <motion.div style={{ rotate, scale, width: '100%', height: '100%', position: 'relative' }}>
                         <Image
-                            src="/images/dental_scanner.png"
+                            src={prefixPath("/images/dental_scanner.png")}
                             alt="Latest generation Dental Scanner"
                             fill
                             className={styles.scannerImage}

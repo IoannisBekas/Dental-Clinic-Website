@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { prefixPath } from '@/utils/basePath';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -20,7 +21,7 @@ export default function Hero() {
         <section className={styles.hero} ref={containerRef}>
             <motion.div className={styles.bgContainer} style={{ y, opacity }}>
                 <Image
-                    src="/images/hero_bg.png"
+                    src={prefixPath("/images/hero_bg.png")}
                     alt="Luxury Dental Interior"
                     fill
                     className={styles.bgImage}

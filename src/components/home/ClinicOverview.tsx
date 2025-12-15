@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { prefixPath } from '@/utils/basePath';
 import styles from './ClinicOverview.module.css';
 
 export default function ClinicOverview() {
@@ -26,7 +27,7 @@ export default function ClinicOverview() {
                 >
                     <motion.div style={{ height: '120%', width: '100%', position: 'absolute', top: '-10%', y }}>
                         <Image
-                            src="/images/clinic_interior.png"
+                            src={prefixPath("/images/clinic_interior.png")}
                             alt="Modern Dental Clinic Interior"
                             fill
                             className={styles.image}

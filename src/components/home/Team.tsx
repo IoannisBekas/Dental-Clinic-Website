@@ -5,16 +5,18 @@ import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
 import styles from './Team.module.css';
 
+import { prefixPath } from '@/utils/basePath';
+
 const team = [
     {
         name: 'Δρ. Αλέξανδρος Παππάς',
         role: 'Χειρουργός Οδοντίατρος',
-        image: '/images/doctor_male.png',
+        image: prefixPath('/images/doctor_male.png'),
     },
     {
         name: 'Δρ. Μαρία Γεωργίου',
         role: 'Ειδική Ορθοδοντικός',
-        image: '/images/doctor_female.png',
+        image: prefixPath('/images/doctor_female.png'),
     }
 ];
 
